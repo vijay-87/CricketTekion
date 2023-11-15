@@ -11,6 +11,8 @@ import java.util.List;
 @Data
 public class TeamResultDto {
 
+    private String teamA;
+    private String teamB;
     private List<TeamResults> teamResults;
     private String winner;
 }

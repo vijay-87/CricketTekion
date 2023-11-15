@@ -146,6 +146,8 @@ public class MatchServiceImpl implements MatchService {
         Match match = matchRepo.findById(matchId).get();
 
         TeamResultDto matchResult = new TeamResultDto();
+        matchResult.setTeamA(match.getTeamA());
+        matchResult.setTeamB(match.getTeamB());
         matchResult.setTeamResults(match.getTeamResults());
         matchResult.setWinner(match.getWinner());
 
