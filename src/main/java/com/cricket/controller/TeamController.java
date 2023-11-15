@@ -25,14 +25,15 @@ public class TeamController {
         return teamService.insertTeam(team);
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping(value = "/update/{id}")
     public Team updateTeam(@PathVariable int id , @RequestBody Team team){
         return teamService.updateTeam(id, team);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping(value="/delete/{id}")
     public Team deleteTeam(@PathVariable int id){
         return teamService.deleteTeam(id);
     }
+
 
 }
