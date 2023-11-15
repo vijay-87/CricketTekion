@@ -16,19 +16,18 @@ import java.util.List;
 
 public class Match {
 
-
-        @Id
+       @Id
         private String id;
         private String teamA;
         private String teamB;
         private List<TeamResults> teamResults;
         private String winner;
 
-        public void addTeamResult(String battingTeam, int totalScore, int wickets, List<String> ballByBall) {
+        public void addTeamResult(String battingTeam,String bowlingTeam, int totalScore, String overs,int wickets, List<String> ballByBall,List<String> playerByPlayer,List<String> overByOver) {
             if (teamResults == null) {
                 teamResults = new ArrayList<>();
             }
-            TeamResults teamresult = new TeamResults(battingTeam, totalScore, wickets, ballByBall);
+            TeamResults teamresult = new TeamResults(battingTeam,bowlingTeam,totalScore, overs,wickets, ballByBall,playerByPlayer,overByOver);
             teamResults.add(teamresult);
         }
     }
